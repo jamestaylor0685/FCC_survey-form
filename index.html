@@ -1,0 +1,120 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <main id="main">
+      <section id="form-container">
+        <p id="description">Please let me know how I can improve my form</p>
+        <form id="survey-form">
+          <label for="name" id="name-label">Name*:</label>
+          <input type="text" id="name" required placeholder="Enter your name"/>
+          <label for="email" id="email-label">Email*:</label>
+          <input type="email" id="email" required placeholder="Enter your email"/>
+          <label for="number" id="number-label">Age:</label>
+          <input type="number" id="number" min="16" max="100" placeholder="16-100"/>
+          <label for="dropdown" id="dropdown-label">What best describes your own skill level:</label>
+          <select id="dropdown">
+            <option value="" disabled hidden selected>Select One</option>
+            <option value="none">None</option>
+            <option value="amateur">Amateur</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+          <label>How likely would you be to offer me work?</label>
+          <ul class="plain-list">
+            <li>
+              <label for="radio_1">
+                <input type="radio" id="radio_1" name="recommend" value="not likely"/>
+                Not likely
+              </label>
+            </li>
+            <li>
+              <label for="radio_2">
+                <input type="radio" id="radio_2" name="recommend" value="likely"/>
+                Likely
+              </label>
+            </li>
+            <li>
+              <label for="radio_3">
+                <input type="radio" id="radio_3" name="recommend" value="definately"/>
+                Definately
+              </label>
+            </li>
+          </ul>
+          <label>Which languges do you think I understand?</label>
+          <ul class="plain-list">
+            <li>
+              <label for="checkbox_1">
+                <input type="checkbox" id="checkbox_1" value="html"/>
+                HTML
+              </label>
+            </li>
+            <li>
+              <label for="checkbox_2">
+                <input type="checkbox" id="checkbox_2" value="css"/>
+                CSS
+              </label>
+            </li>
+            <li>
+              <label for="checkbox_3">
+                <input type="checkbox" id="checkbox_3" value="javascript"/>
+                Javascript
+              </label>
+            </li>
+          </ul>
+          <label for="textarea">Any other comments you wish to make:</label>
+          <textarea rows="5"placeholder="enter your comments here..."></textarea>
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+  </body>
+  <style type="text/css">
+    #title {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    #main {
+      display: grid;
+      grid-column-template: 100%;
+      grid-gap: 15px 30px;
+      justify-items: center;
+      background-color: lightgrey;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 30px 15px;
+    }
+    #description {
+      text-align: center;
+    }
+    #form-container {
+      width: 50%;
+    }
+    #survey-form {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-template-rows: auto;
+      grid-gap: 15px 10px;
+    }
+    .plain-list {
+      list-style: none;
+    }
+    label {
+      justify-self: end;
+    }
+    #submit {
+      justify-self: center;
+      grid-column: 1 / span 2;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: brown;
+      color: white;
+      text-transform: uppercase;
+    }
+  </style>
+</html>
